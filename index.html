@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- links to files for app  -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css">
+    <!-- page title as seen in the tab-->
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h1 class="bg-dark text-white text-center pt-2 pb-3 mb-0">Weather Dashboard</h1>
+    </header>
+    <!-- aside containing the search input field and button, as well as the search history -->
+    <aside class="bg-light mt-0 mr-0 pt-2 pl-2 pb-4 pr-3">
+        <!-- h4 heading above the search input and button -->
+        <h4>Search for a City: </h4>
+        <form>
+            <div class="form-row">
+                <!-- search input field -->
+                <div class="col-auto">
+                    <input type="text" class="form-control mb-2 ml-1 mr-0" id="cityInput">
+                </div>
+                <!-- search button -->
+                <div class="col-auto">
+                    <button class="btn btn-primary mb-2 ml-0 mr-2" id="search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <!-- empty list group card for the search history to be added 1 city at a time -->
+        <div class="card" style="width: 100%;">
+            <ul class="list-group list-group-flush" id="pastCity">
+                
+            </ul>
+        </div>
+    </aside>
+    <!-- main containing the search results -->
+    <main class="mr-2 mt-3 ml-0 pl-0 d-inline">
+        <!-- empty div for the current weather results to be added -->
+        <div class="p-3" style="width: 100%;" id="current">
+            
+        </div>
+        <!-- empty card deck div for the 5 days after current day forecast results -->
+        <div style="width: 100%;">
+            <h3 class="mt-3" id="fiveDay"></h3>
+            <div class="card-deck" id="future">
+                
+            </div>
+        </div>
+    </main>
+    
+    <!--linking to jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--linking to Moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!--linking to script.js file-->
+    <script src="./script.js"></script>
+</body>
+</html>
